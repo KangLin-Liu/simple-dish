@@ -38,7 +38,7 @@ export default {
         this.axios(
           `/dish/search?keyword=${this.value}&num=10&appkey=90f6571199fb444271209711e16cf357`
         ).then(res => {
-          console.log(res);
+          // console.log(res);
           this.searchResult = res.data.result.result.list;
         });
       } else {
@@ -47,7 +47,7 @@ export default {
       }
     },
     select(item) {
-      console.log(item);
+      // console.log(item);
       this.$router.push({ name: "Detail", params: item });
     }
     // watch: {

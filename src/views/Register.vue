@@ -52,7 +52,7 @@ export default {
   },
   methods: {
     register() {
-      console.log(this.phone, this.password, this.rePassword);
+      // console.log(this.phone, this.password, this.rePassword);
       let phone = /^1[3456789]\d{9}$/;
       let key = /^[0-9a-zA-Z]{6,16}$/;
       if (
@@ -60,7 +60,7 @@ export default {
         key.test(this.password) &&
         this.password == this.rePassword
       ) {
-        console.log("注册成功");
+        // console.log("注册成功");
         this.$store.state.phone = this.phone;
         this.$store.state.password = this.password;
         this.$store.state.rePassword = this.rePassword;

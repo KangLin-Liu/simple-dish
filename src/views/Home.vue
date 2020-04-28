@@ -69,7 +69,7 @@ export default {
   },
   methods: {
     select(item) {
-      console.log(item);
+      // console.log(item);
       this.$router.push({ name: "Detail", params: item });
     }
   },

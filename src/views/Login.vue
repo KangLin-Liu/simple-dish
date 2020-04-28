@@ -51,7 +51,7 @@ export default {
         this.loginPassword == this.$store.state.password &&
         this.loginPhone != ""
       ) {
-        console.log("登录成功");
+        // console.log("登录成功");
         this.$store.state.loginFlag = true;
         const toast = this.$toast.loading({
           duration: 0, // 持续展示 toast

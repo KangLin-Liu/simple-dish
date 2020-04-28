@@ -107,7 +107,7 @@ export default {
       if (to.name == "Detail") {
         this.resData = this.$route.params;
         // this.describe = this.$route.params.content;
-        console.log(this.resData);
+        // console.log(this.resData);
         this.adjustContent();
         this.resTag = this.$route.params.tag.split(",");
         this.resmaterial = this.$route.params.material;
@@ -158,12 +158,12 @@ export default {
           this.$store.commit("collectDish", id);
           this.isSelect = 1;
           this.$toast.success("收藏成功");
-          console.log(this.$store.state.collectArr);
+          // console.log(this.$store.state.collectArr);
         } else {
           this.$store.commit("removeDish", id);
           this.isSelect = 0;
           this.$toast.success("取消收藏");
-          console.log(this.$store.state.collectArr);
+          // console.log(this.$store.state.collectArr);
         }
       } else {
         this.$toast("请登录后再进行收藏");
@@ -171,7 +171,7 @@ export default {
     }
   },
   created() {
-    console.log(this.$route.params);
+    // console.log(this.$route.params);
     this.resData = this.$route.params;
     // this.describe = this.$route.params.content;
     this.adjustContent();

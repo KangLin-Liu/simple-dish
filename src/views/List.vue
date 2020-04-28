@@ -33,9 +33,9 @@ export default {
     },
     methods: {
         select(item){
-            console.log(item);
+            // console.log(item);
             this.axios(`/dish/detail?id=${item.id}&appkey=90f6571199fb444271209711e16cf357`).then(res=>{
-                console.log(res);
+                // console.log(res);
                 this.$router.push({name:'Detail',params:item});
             })
         }
@@ -44,13 +44,13 @@ export default {
         $route(to,from){
             if(to.name == "List" && from.name == "Sort"){
                 this.resData = this.$route.params;
-                console.log(this.resData);
+                // console.log(this.resData);
             }
         }
         
     },
     created() {
-        console.log(this.$route.params);
+        // console.log(this.$route.params);
         this.resData = this.$route.params;
     },
 };

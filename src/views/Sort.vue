@@ -66,19 +66,19 @@ export default {
     selectList(index) {
       //每次进来先把高度清空
       this.contentHeight = 0;
-      console.log(index);
+      // console.log(index);
       this.currentIndex = index;
-      console.log(this.$refs.content[index]);
-      console.log(
-        this.$refs.content[index].offsetHeight,
-        this.$refs.content.length
-      );
+      // console.log(this.$refs.content[index]);
+      // console.log(
+      //   this.$refs.content[index].offsetHeight,
+      //   this.$refs.content.length
+      // );
       //高度进行累加
       for (let i = 0; i < index; i++) {
         //16为margin的值
         this.contentHeight += this.$refs.content[i].offsetHeight + 16;
       }
-      console.log(this.contentHeight);
+      // console.log(this.contentHeight);
       this.scrollRight.scrollTo(0, -this.contentHeight, 500);
     },
     //进行初始化
@@ -116,11 +116,11 @@ export default {
     },
     //选择右边内容区
     selectContent(value) {
-      console.log(value);
+      // console.log(value);
       this.axios(
         `/dish/byclass?classid=${value.classid}&start=0&num=10&appkey=90f6571199fb444271209711e16cf357`
       ).then(res => {
-        console.log(res);
+        // console.log(res);
         this.$router.push({
           name: "List",
           params: { list: res.data.result.result, name: value }
@@ -131,14 +131,14 @@ export default {
   mounted() {
     this.axios("/dish//recipe_class?appkey=90f6571199fb444271209711e16cf357")
       .then(res => {
-        console.log(res);
+        // console.log(res);
         this.sortData = res.data.result.result;
         this.$nextTick(() => {
           this.initScroll();
         });
       })
       .catch(err => {
-        console.log(err);
+        // console.log(err);
       });
   },
   beforeDestroy() {

@@ -37,11 +37,11 @@ export default {
       this.$router.push({ name: "Login" });
     },
     select(item) {
-      console.log(item);
+      // console.log(item);
       this.axios(
         `/dish/detail?id=${item.id}&appkey=90f6571199fb444271209711e16cf357`
       ).then(res => {
-        console.log(res);
+        // console.log(res);
         this.$router.push({ name: "Detail", params: item });
       });
     }
@@ -55,7 +55,7 @@ export default {
           this.axios(
             `/dish/detail?id=${v}&appkey=90f6571199fb444271209711e16cf357`
           ).then(res => {
-            console.log(res.data.result.result);
+            // console.log(res.data.result.result);
             this.listArr.push(res.data.result.result);
           });
         });
@@ -70,7 +70,7 @@ export default {
       this.axios(
         `/dish/detail?id=${v}&appkey=90f6571199fb444271209711e16cf357`
       ).then(res => {
-        console.log(res.data.result.result);
+        // console.log(res.data.result.result);
         this.listArr.push(res.data.result.result);
       });
     });
