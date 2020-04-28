@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-nav-bar class="top" fixed :title="resData.name" left-arrow @click-left="$router.go(-1)" />
+    <van-nav-bar class="top" left-text="返回" fixed :title="resData.name" left-arrow @click-left="$router.go(-1)" />
     <div class="margin-top"></div>
     <div class="detail">
       <div class="img">
